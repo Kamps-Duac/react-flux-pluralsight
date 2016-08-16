@@ -1,6 +1,7 @@
 $ = jQuery = require('jquery');
 var React = require('react');
 var Home = require('./componenets/homePage');
+var Authors = require('./componenets/authors/authorPage');
 var About = require('./componenets/about/aboutPage');
 var Header = require('./componenets/common/header');
 
@@ -13,6 +14,9 @@ var Header = require('./componenets/common/header');
 			switch (this.props.route) {
 				case 'about':
 					Child = About;
+					break;
+				case 'authors':
+					Child = Authors;
 					break;
 				default:
 					Child = Home;
